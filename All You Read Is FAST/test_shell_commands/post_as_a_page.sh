@@ -1,0 +1,3 @@
+curl -i -X POST "https://graph.facebook.com/111767213828347/feed?message=Hello%20World%20I'm%20XYZ!&access_token=EAADP8Lkgn0YBAMznS1TneVwayMIM8HrmJu9kudmfmJRSMReZBQlSWO5q1Oh1ZAvZA9UbTAgKZCeWq2tKaS3P4so998Oj3SbHVJaJtZC1mlzfSsJMyZAaoRK1lvyMjdmjZAcXWzVRdTVlhcYdS8k2F6wgJrUDZBQvUbZCsyoccZAlV6RwIMQIOX7S8JaYZBHigFWey0ZD"
+
+# curl -i -X POST "https://graph.facebook.com/{page_id}/feed?message=HelloWorldI'mXYZ!&access_token={access_token}"
