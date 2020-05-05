@@ -59,6 +59,8 @@ client.query('SELECT * from test1;', (err, res) => {
     console.log(JSON.stringify(row));
   }
   client.end();
+}).catch( function() {
+  console.log("Promise rejected");
 });
 
 // Adds support for GET requests to our webhook
