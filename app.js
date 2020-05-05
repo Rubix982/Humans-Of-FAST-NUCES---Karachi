@@ -37,8 +37,8 @@ client.connect(function(error) {``
   });
 });
 
-app.get("/api/all", function(res, req) {
-  client.query("SELECT * from test1", (error, result) => {
+app.get("/api/all", function(req, res) {
+  client.query("SELECT * from test1;", (error, result) => {
     res.json(result);
   });
 });
