@@ -32,13 +32,13 @@ const client = new Client({
 
 client.connect(function(error) {``
   console.log("connected to db");
-  app.listen(9999, function() {
-    console.log("listening at port " + 9999);
+  app.listen(process.env.PORT, function() {
+    console.log("listening at port " + process.env.PORT);
   });
 });
 
 app.get("/api/all", function(res, req) {
-  client.quert("SELECT * from test1", (error, result) => {
+  client.query("SELECT * from test1", (error, result) => {
     res.json(result);
   });
 });
