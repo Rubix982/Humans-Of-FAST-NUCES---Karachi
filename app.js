@@ -51,11 +51,11 @@ app.get("/", function(_req, res) {
   res.render("index");
 });
 
-// app.get("/api/all", function(req, res) {
-//   client.query("SELECT * from test1;", (error, result) => {
-//     res.json(result);
-//   });
-// });
+app.get("/api/all", function(req, res) {
+  client.query("SELECT * from test1", (error, result) => {
+    res.json(result);
+  });
+});
 
 // Adds support for GET requests to our webhook
 app.get("/webhook", (req, res) => {
