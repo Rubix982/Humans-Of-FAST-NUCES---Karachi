@@ -43,6 +43,7 @@ const client = new Client({
   ssl: true,
 });
 
+console.log(client);
 console.log("Connecting database");
 client.connect();
 console.log("Database connected");
