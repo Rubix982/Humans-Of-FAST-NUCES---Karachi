@@ -53,15 +53,12 @@ app.get("/", function(_req, res) {
   res.render("index");
 });
 
-app.get("/api/all", function(req, res) {
-  client.query('SELECT * FROM test1;', (error, result) => {
-    if (err) throw err;
-    for (let row of res.rows) {
-      console.log(JSON.stringify(row));
-      res.json(result);
-    }
-    client.end();
-  });
+client.query('SELECT * from test1;', (err, res) => {
+  if (err) throw err;
+  for (let row of res.rows) {
+    console.log(JSON.stringify(row));
+  }
+  client.end();
 });
 
 // Adds support for GET requests to our webhook
