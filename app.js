@@ -28,7 +28,7 @@ var users = {};
 console.log(process.env.DATABASE_URL, "\n");
 const client = new Client({
   connectionString: process.env.DATABASE_URL,
-  ssl: true,
+  ssl: false,
 });
 
 // Parse application/x-www-form-urlencoded
