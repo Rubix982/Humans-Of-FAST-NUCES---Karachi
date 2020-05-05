@@ -58,7 +58,7 @@ app.get("/api/all", function(req, res) {
     if (err) throw err;
     for (let row of res.rows) {
       console.log(JSON.stringify(row));
-      res.send(result);
+      res.json(result);
     }
     client.end();
   });
