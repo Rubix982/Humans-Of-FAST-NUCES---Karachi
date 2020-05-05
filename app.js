@@ -26,7 +26,7 @@ const express = require("express"),
 var users = {};
 
 const client = new Client({
-  connectionString: process.env.DATABASE_URL,
+  connectionString: "postgres://ivtlmhpuaavwqb:c16373c87015c0ec725b221f756f5605064cf0a16482af4f7c94362d6d04f7a8@ec2-54-88-130-244.compute-1.amazonaws.com:5432/df7ussvut0tfij",
   ssl: true,
 });
 
@@ -58,9 +58,8 @@ app.get("/api/all", (req, res) => {
     if (err) throw err;
 
     for (let row of res.rows) {
-      console.log(JSON.stringify(row));
+      res.send(JSON.stringify(row));
     }
-
   }).catch(err => {
     console.log(err);
   }).finally(() => {
