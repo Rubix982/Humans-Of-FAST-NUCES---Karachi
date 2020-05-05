@@ -44,7 +44,7 @@ const client = new Client({
 });
 
 console.log(client);
-console.log("Connecting database");
+console.log("-------- Connecting database");
 // client.connect(err => {
 //   if (err) {
 //     console.error('connection error', err.stack)
@@ -53,9 +53,8 @@ console.log("Connecting database");
 //   }
 // });
 client.connect()
+console.log("---------- Database connected");
 console.log(client);
-
-console.log("Database connected");
 
 client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
 
@@ -65,6 +64,20 @@ client.query('SELECT table_schema,table_name FROM information_schema.tables;', (
     console.log(JSON.stringify(row));
   }
   client.end();
+});
+
+console.log("After 1st query");
+
+client
+.query('SELECT table_schema,table_name FROM information_schema.tables;')
+.then(res => {
+    console.log('Query 2 performed successfully');
+})
+.catch(err => {
+    console.error(err);
+})
+.finally(() => {
+    client.end();
 });
 
 // client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
