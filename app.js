@@ -31,6 +31,10 @@ const client = new Client({
   ssl: true,
 });
 
+console.log("Connecting database");
+client.connect();
+console.log("Database connected");
+
 // Parse application/x-www-form-urlencoded
 app.use(
   urlencoded({
@@ -54,9 +58,6 @@ app.get("/", function(_req, res) {
 
 app.get("/api/all", (req, res) => {
 
-  console.log("Connecting database");
-  client.connect()
-  console.log("Databse connected");
   client.query('SELECT * from test1;').then(res => {
     if (err) throw err;
 
