@@ -20,7 +20,6 @@ const express = require("express"),
   User = require("./services/user"),
   config = require("./services/config"),
   i18n = require("./i18n.config"),
-  { client } = require('pg');
   app = express();
 
 var users = {};
