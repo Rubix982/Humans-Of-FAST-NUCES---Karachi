@@ -30,6 +30,19 @@ const client = new Client({
   ssl: true,
 });
 
+client.connect(function(error) {
+  console.log("connected to db");
+  app.listen(PORT, function() {
+    console.log("listening at port " + PORT);
+  });
+});
+
+app.get("/api/all", function(res, req) {
+  client.quert("SELECT * from test1", (error, result) => {
+    res.json(result);
+  });
+});
+
 // Parse application/x-www-form-urlencoded
 app.use(
   urlencoded({
