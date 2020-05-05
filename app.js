@@ -20,7 +20,7 @@ const express = require("express"),
   User = require("./services/user"),
   config = require("./services/config"),
   i18n = require("./i18n.config"),
-  { client } = require('pg'),
+  { Client } = require('pg'),
   app = express();
 
 var users = {};
@@ -32,8 +32,8 @@ const client = new Client({
 
 client.connect(function(error) {``
   console.log("connected to db");
-  app.listen(PORT, function() {
-    console.log("listening at port " + PORT);
+  app.listen(9999, function() {
+    console.log("listening at port " + 9999);
   });
 });
 
