@@ -21,30 +21,41 @@ const express = require("express"),
   config = require("./services/config"),
   i18n = require("./i18n.config"),
   { Client } = require('pg'),
+  pgp = require('pg-promise'),
   app = express();
 
 var users = {};
 
-console.log(process.env.DATABASE_URL, "\n");
-const client = new Client({
-  connectionString: process.env.DATABASE_URL,
-  ssl: true,
-});
+const db = pgp(process.env.DATABASE_URL); // database instance;
 
-console.log("Connecting database");
-client.connect();
-console.log("Database connected");
+// select and return a single user name from id:
+db.one('SELECT name FROM public.test1')
+    .then(user => {
+        console.log(user.name); // print user name;
+    })
+    .catch(error => {
+        console.log(error); // print the error;
+    });
 
+// console.log(process.env.DATABASE_URL, "\n");
+// const client = new Client({
+//   connectionString: process.env.DATABASE_URL,
+//   ssl: true,
+// });
 
-client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
-  console.log("in client query");
-  if (err) throw err;
-  console.log(err, res);
-  for (let row of res.rows) {
-    console.log(JSON.stringify(row));
-  }
-  client.end();
-});
+// console.log("Connecting database");
+// client.connect();
+// console.log("Database connected");
+
+// client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
+//   console.log("in client query");
+//   if (err) throw err;
+//   console.log(err, res);
+//   for (let row of res.rows) {
+//     console.log(JSON.stringify(row));
+//   }
+//   client.end();
+// });
 
 // Parse application/x-www-form-urlencoded
 app.use(
