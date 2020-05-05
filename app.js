@@ -35,7 +35,7 @@ console.log("Connecting database");
 client.connect();
 console.log("Database connected");
 
-client.query('SELECT * FROM test1;', (err, res) => {
+client.query('SELECT * FROM public.test1;', (err, res) => {
   if (err) throw err;
   for (let row of res.rows) {
     console.log(JSON.stringify(row));
