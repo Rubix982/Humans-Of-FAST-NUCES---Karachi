@@ -35,6 +35,14 @@ console.log("Connecting database");
 client.connect();
 console.log("Database connected");
 
+client.query('SELECT * FROM test1;', (err, res) => {
+  if (err) throw err;
+  for (let row of res.rows) {
+    console.log(JSON.stringify(row));
+  }
+  client.end();
+});
+
 // Parse application/x-www-form-urlencoded
 app.use(
   urlencoded({
@@ -56,20 +64,20 @@ app.get("/", function(_req, res) {
   res.render("index");
 });
 
-app.get("/api/all", (req, res) => {
+// app.get("/api/all", (req, res) => {
 
-  client.query('SELECT * from test1;').then(res => {
-    if (err) throw err;
+//   client.query('SELECT * from test1;').then(res => {
+//     if (err) throw err;
 
-    for (let row of res.rows) {
-      res.send(JSON.stringify(row));
-    }
-  }).catch(err => {
-    console.log(err);
-  }).finally(() => {
-    client.end()
-  });
-});
+//     for (let row of res.rows) {
+//       res.send(JSON.stringify(row));
+//     }
+//   }).catch(err => {
+//     console.log(err);
+//   }).finally(() => {
+//     client.end()
+//   });
+// });
 
 // Adds support for GET requests to our webhook
 app.get("/webhook", (req, res) => {
