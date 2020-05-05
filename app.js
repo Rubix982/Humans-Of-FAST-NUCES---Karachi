@@ -20,9 +20,15 @@ const express = require("express"),
   User = require("./services/user"),
   config = require("./services/config"),
   i18n = require("./i18n.config"),
+  { client } = require('pg');
   app = express();
 
 var users = {};
+
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: true,
+});
 
 // Parse application/x-www-form-urlencoded
 app.use(
