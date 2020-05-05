@@ -45,7 +45,17 @@ const client = new Client({
 
 console.log(client);
 console.log("Connecting database");
-client.connect();
+await client.connect(err => {
+  if (err) {
+    console.error('connection error', err.stack)
+  } else {
+    console.log('connected')
+  }
+})
+.then(() => console.log("connected"))
+.catch(err => console.log("connection error", err.stack))
+console.log(client);
+
 console.log("Database connected");
 
 client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
