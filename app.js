@@ -48,6 +48,8 @@ client.connect();
 console.log("Database connected");
 
 client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
+
+  console.log("Query succesfully ran");
   if (err) throw err;
   for (let row of res.rows) {
     console.log(JSON.stringify(row));
