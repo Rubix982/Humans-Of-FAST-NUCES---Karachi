@@ -67,3 +67,7 @@ Or, use Webhooks for Pages to retrieve the messages.
 - App ID `228632805023558`
 - App Secret `0061ac1d01c73c65e423445d3d8ba093`
 - Access Token `EAADP8Lkgn0YBAFAVhIOoQaYuPAfmSySfPA5FTanNLJeICcK5z1b8vTxZBKX7dd2hPZClpEf3iqpoJJs4JRtvbwYchGrDuPxdiZC5hokL1h3QQDXWskm3CvsIaiy7bjJvC7Nfirsc49qyhVaQCjo2tWZA85cp74k6kM8rZBI5pRwZDZD`
+
+## Heroku Instructions
+
+- Connecting to the database `heroku pg:psql HEROKU_POSTGRESQL_COPPER`.

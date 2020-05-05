@@ -19,3 +19,6 @@ AllYouReadIsFAST/
 
 # dotenv environment variables file
 .env
+
+# misc files
+Research.md
