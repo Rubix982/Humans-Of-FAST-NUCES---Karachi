@@ -45,15 +45,14 @@ const client = new Client({
 
 console.log(client);
 console.log("Connecting database");
-client.connect(err => {
-  if (err) {
-    console.error('connection error', err.stack)
-  } else {
-    console.log('connected')
-  }
-})
-.then(() => console.log("connected"))
-.catch(err => console.log("connection error", err.stack))
+// client.connect(err => {
+//   if (err) {
+//     console.error('connection error', err.stack)
+//   } else {
+//     console.log('connected')
+//   }
+// });
+client.connect()
 console.log(client);
 
 console.log("Database connected");
