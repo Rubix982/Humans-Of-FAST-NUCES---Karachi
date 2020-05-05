@@ -53,14 +53,17 @@ app.get("/", function(_req, res) {
   res.render("index");
 });
 
-client.query('SELECT * from test1;', (err, res) => {
+client.query('SELECT * from test1;').then(res => {
   if (err) throw err;
+
   for (let row of res.rows) {
     console.log(JSON.stringify(row));
   }
-  client.end();
-}).catch( function() {
-  console.log("Promise rejected");
+
+}).catch(err => {
+  console.log(err);
+}).finally(() => {
+  client.end()
 });
 
 // Adds support for GET requests to our webhook
