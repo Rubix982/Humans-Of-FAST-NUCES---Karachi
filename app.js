@@ -45,7 +45,7 @@ const client = new Client({
 
 console.log(client);
 console.log("Connecting database");
-await client.connect(err => {
+client.connect(err => {
   if (err) {
     console.error('connection error', err.stack)
   } else {
