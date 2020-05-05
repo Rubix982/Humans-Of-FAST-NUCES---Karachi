@@ -30,6 +30,8 @@ const client = new Client({
   ssl: true,
 });
 
+client.connect()
+
 // Parse application/x-www-form-urlencoded
 app.use(
   urlencoded({
@@ -52,8 +54,13 @@ app.get("/", function(_req, res) {
 });
 
 app.get("/api/all", function(req, res) {
-  client.query("SELECT * from test1", (error, result) => {
-    res.json(result);
+  client.query('SELECT * FROM test1;', (error, result) => {
+    if (err) throw err;
+    for (let row of res.rows) {
+      console.log(JSON.stringify(row));
+      res.send(result);
+    }
+    client.end();
   });
 });
 
