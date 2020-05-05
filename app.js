@@ -51,9 +51,11 @@ app.get("/", function(_req, res) {
   res.render("index");
 });
 
-client.connect()
-
 app.get("/api/all", (req, res) => {
+
+  console.log("Connecting database");
+  client.connect()
+  console.log("Databse connected");
   client.query('SELECT * from test1;').then(res => {
     if (err) throw err;
 
