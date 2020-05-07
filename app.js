@@ -27,9 +27,8 @@ const express = require("express"),
 
 var users = {};
 
-console.log(process.env.DATABASE_URL,)
 const client = new Client({
-  connectionString: process.env.DATABASE_URL,
+  connectionString: "postgres://ombilwbhgkunno:0f9681eb88c54c62abcd801a671d3440cb0e9191c69e3a7b6c9cb6390b71a95e@ec2-54-88-130-244.compute-1.amazonaws.com:5432/d3c980ou10n32i",
   ssl: true,
   user: 'ombilwbhgkunno',
   password: '0f9681eb88c54c62abcd801a671d3440cb0e9191c69e3a7b6c9cb6390b71a95e',
@@ -52,22 +51,22 @@ client.connect(err => {
 console.log("---------- Database connected");
 console.log(client);
 
-app.get("/api/all", (req, res) => {
+let query = 'SELECT table_schema,table_name FROM information_schema.tables;';
 
-  client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, result) => {
+function getOutput(error, result) {
 
-    if (err) {
-      res.json(err);
-      return;
-    }
+  if (error) {
+    // result.send(error);
+    console.log(error);
+    return;
+  }
 
-    res.json(result);
-    // res.send('Table is successfully created');
-    client.end();
+  // result.send(result);
+  console.log(result);
+  client.end();
+};
 
-  });
-
-});
+client.query(query, getOutput);
 
 console.log("After 1st query");
 
