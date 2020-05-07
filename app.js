@@ -52,21 +52,28 @@ console.log("---------- Database connected");
 console.log(client);
 
 let query = 'SELECT table_schema,table_name FROM information_schema.tables;';
+let local_err="", local_result="";
+
 
 function getOutput(error, result) {
 
   if (error) {
-    // result.send(error);
-    result.send(error);
+    local_err = error;
     return;
   }
 
-  // result.send(result);
-  result.send(result);
+  local_result = (result);
   client.end();
 };
 
 client.query(query, getOutput);
+
+app.get("/check_data", (req, res) => {
+  if ( local_err.length > 1 )
+    res.send(local_err);
+  else
+    res.send(local_result);
+});
 
 console.log("After 1st query");
 
