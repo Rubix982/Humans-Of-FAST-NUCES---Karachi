@@ -26,43 +26,33 @@ const express = require("express"),
 
 var users = {};
 
-// const db = pgp(process.env.DATABASE_URL); // database instance;
-
-// // select and return a single user name from id:
-// db.one('SELECT name FROM public.test1')
-//     .then(user => {
-//         console.log(user.name); // print user name;
-//     })
-//     .catch(error => {
-//         console.log(error); // print the error;
-//     });
-
 console.log(process.env.DATABASE_URL, "\n");
 const client = new Client({
-  connectionString: "postgres://ivtlmhpuaavwqb:c16373c87015c0ec725b221f756f5605064cf0a16482af4f7c94362d6d04f7a8@ec2-54-88-130-244.compute-1.amazonaws.com:5432/df7ussvut0tfij",
+  connectionString: process.env.DATABASE_URL,
   ssl: true,
 });
 
 console.log(client);
 console.log("-------- Connecting database");
-// client.connect(err => {
-//   if (err) {
-//     console.error('connection error', err.stack)
-//   } else {
-//     console.log('connected')
-//   }
-// });
-client.connect()
+
+client.connect(err => {
+  if (err) {
+    console.error('connection error', err.stack)
+  } else {
+    console.log('connected')
+  }
+})
+
 console.log("---------- Database connected");
 console.log(client);
 
 client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
 
-  console.log("Query succesfully ran");
-  if (err) throw err;
-  for (let row of res.rows) {
-    console.log(JSON.stringify(row));
+  if (err) {
+    console.error(err);
+    return;
   }
+  console.log('Table is successfully created');
   client.end();
 });
 
