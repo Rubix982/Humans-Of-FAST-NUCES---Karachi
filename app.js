@@ -52,14 +52,19 @@ client.connect(err => {
 console.log("---------- Database connected");
 console.log(client);
 
-client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
+app.get("/api/all", (req, res) => {
 
-  if (err) {
-    console.error(err);
-    return;
-  }
-  console.log('Table is successfully created');
-  client.end();
+  client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
+
+    if (err) {
+      console.error(err);
+      return;
+    }
+    console.log('Table is successfully created');
+    client.end();
+
+  });
+
 });
 
 console.log("After 1st query");
