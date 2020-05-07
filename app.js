@@ -57,12 +57,12 @@ function getOutput(error, result) {
 
   if (error) {
     // result.send(error);
-    console.log(error);
+    result.send(error);
     return;
   }
 
   // result.send(result);
-  console.log(result);
+  result.send(result);
   client.end();
 };
 
