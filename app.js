@@ -28,17 +28,9 @@ const express = require("express"),
 var users = {};
 
 const client = new Client({
-  connectionString: "postgres://ombilwbhgkunno:0f9681eb88c54c62abcd801a671d3440cb0e9191c69e3a7b6c9cb6390b71a95e@ec2-54-88-130-244.compute-1.amazonaws.com:5432/d3c980ou10n32i",
+  connectionString: process.env.DATABASE_URL,
   ssl: true,
-  user: 'ombilwbhgkunno',
-  password: '0f9681eb88c54c62abcd801a671d3440cb0e9191c69e3a7b6c9cb6390b71a95e',
-  host: 'ec2-54-88-130-244.compute-1.amazonaws.com',
-  port: 5432,
-  database: 'd3c980ou10n32i',
 });
-
-console.log(client);
-console.log("-------- Connecting database");
 
 client.connect(err => {
   if (err) {
@@ -48,34 +40,17 @@ client.connect(err => {
   }
 });
 
-console.log("---------- Database connected");
-console.log(client);
-
 let query = 'SELECT table_schema,table_name FROM information_schema.tables;';
-let local_err="", local_result="";
-
-
-function getOutput(error, result) {
+client.query(query, function getOutput(error, result) {
 
   if (error) {
-    local_err = error;
+    console.log(error);
     return;
   }
 
-  local_result = (result);
+  console.log(result);
   client.end();
-};
-
-client.query(query, getOutput);
-
-app.get("/check_data", (req, res) => {
-  if ( local_err.length > 1 )
-    res.send(local_err);
-  else
-    res.send(local_result);
 });
-
-console.log("After 1st query");
 
 // Parse application/x-www-form-urlencoded
 app.use(
