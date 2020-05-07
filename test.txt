@@ -1,1 +1,0 @@
-User ID=ivtlmhpuaavwqb;Password=c16373c87015c0ec725b221f756f5605064cf0a16482af4f7c94362d6d04f7a8;Host=ec2-54-88-130-244.compute-1.amazonaws.com;Port=5432;Database=df7ussvut0tfij;Pooling=true;Min Pool Size=0;Max Pool Size=100;Connection Lifetime=0;
