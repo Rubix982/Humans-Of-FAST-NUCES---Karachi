@@ -54,13 +54,15 @@ console.log(client);
 
 app.get("/api/all", (req, res) => {
 
-  client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, res) => {
+  client.query('SELECT table_schema,table_name FROM information_schema.tables;', (err, result) => {
 
     if (err) {
-      console.error(err);
+      res.json(err);
       return;
     }
-    console.log('Table is successfully created');
+
+    res.json(result);
+    // res.send('Table is successfully created');
     client.end();
 
   });
