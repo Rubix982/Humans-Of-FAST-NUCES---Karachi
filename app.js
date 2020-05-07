@@ -21,28 +21,26 @@ const express = require("express"),
   User = require("./services/user"),
   config = require("./services/config"),
   i18n = require("./i18n.config"),
-  { Client } = require('pg'),
-  pgp = require('pg-promise'),
+  { Client } = require("pg"),
   app = express();
 
 var users = {};
 
 const client = new Client({
   connectionString: process.env.DATABASE_URL,
-  ssl: true,
+  ssl: true
 });
 
 client.connect(err => {
   if (err) {
-    console.error('connection error', err.stack);
+    console.error("connection error", err.stack);
   } else {
-    console.log('connected');
+    console.log("connected");
   }
 });
 
-let query = 'SELECT table_schema,table_name FROM information_schema.tables;';
+let query = "SELECT table_schema,table_name FROM information_schema.tables;";
 client.query(query, function getOutput(error, result) {
-
   if (error) {
     console.log(error);
     return;
@@ -72,21 +70,6 @@ app.set("view engine", "ejs");
 app.get("/", function(_req, res) {
   res.render("index");
 });
-
-// app.get("/api/all", (req, res) => {
-
-//   client.query('SELECT * from test1;').then(res => {
-//     if (err) throw err;
-
-//     for (let row of res.rows) {
-//       res.send(JSON.stringify(row));
-//     }
-//   }).catch(err => {
-//     console.log(err);
-//   }).finally(() => {
-//     client.end()
-//   });
-// });
 
 // Adds support for GET requests to our webhook
 app.get("/webhook", (req, res) => {
@@ -131,15 +114,13 @@ app.post("/webhook", (req, res) => {
                 "post_id",
                 change.post_id
               );
-              break;
             case "comment":
               return receiveMessage.handlePrivateReply(
                 "commentgity _id",
                 change.comment_id
               );
-              break;
             default:
-              console.log('Unsupported feed change type.');
+              console.log("Unsupported feed change type.");
               return;
           }
         }
