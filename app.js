@@ -145,6 +145,7 @@ app.post("/webhook", (req, res) => {
 
       // Get the sender PSID
       let senderPsid = webhookEvent.sender.id;
+      console.log("Sender PSID: " + senderPsid);
 
       if (!(senderPsid in users)) {
         let user = new User(senderPsid);
