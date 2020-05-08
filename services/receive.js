@@ -222,7 +222,7 @@ module.exports = class Receive {
   }
 
   handlePrivateReply(type, object_id) {
-    let welcomeMessage = "hello";
+    let welcomeMessage = "hellooooo";
 
     let response = Response.genQuickReply(welcomeMessage, [
       {
