@@ -223,7 +223,7 @@ module.exports = class Receive {
 
   handlePrivateReply(type, object_id) {
     let welcomeMessage =
-      i18n.__("leadgen.promo") +
+      i18n.__("leadgen.promo") + "hello" + " " + "how are you" +
       " " +
       i18n.__("get_started.welcome") +
       " " +
