@@ -1,7 +1,7 @@
 {
-  "name": "original-coast-clothing",
+  "name": "Humans Of FAST NUCES - Karachi",
   "version": "1.0.0",
-  "description": "A sample app to show how to build a great Messenger experience!",
+  "description": "A messenger for the page at https://web.facebook.com/Humans-Of-FAST-NUCES-Khi-101048718279439",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -24,7 +24,7 @@
     "node": "^8.10.0 || ^10.13.0 || >=11.10.1"
   },
   "repository": {
-    "url": "https://github.com/fbsamples/original-coast-clothing"
+    "url": "https://github.com/Rubix982/Humans-Of-FAST-NUCES---Karachi"
   },
   "author": "Facebook",
   "license": "ISC",
