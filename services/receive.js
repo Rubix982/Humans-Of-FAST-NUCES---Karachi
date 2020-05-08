@@ -99,7 +99,7 @@ module.exports = class Receive {
             message: this.webhookEvent.message.text
           })
         ),
-        Response.genText(i18n.__("get_started.guidance")),
+        Response.genText(i18n.__("curation.prompt")),
         Response.genQuickReply(i18n.__("get_started.help"), [
           {
             title: i18n.__("menu.suggestion"),
