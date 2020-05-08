@@ -26,6 +26,7 @@ const express = require("express"),
 
 var users = {};
 
+// Make new client object
 const client = new Client({
   connectionString: process.env.DATABASE_URL,
   ssl: true
@@ -39,6 +40,7 @@ client.connect(err => {
   }
 });
 
+// Sanity check see if the output is generated locally.
 let query = "SELECT table_schema,table_name FROM information_schema.tables;";
 client.query(query, function getOutput(error, result) {
   if (error) {
