@@ -242,6 +242,8 @@ module.exports = class Receive {
       }
     ]);
 
+    console.log(`Here in receive.js, checking for output`, response.text);
+
     let requestBody = {
       recipient: {
         [type]: object_id
