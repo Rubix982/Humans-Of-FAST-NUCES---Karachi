@@ -126,7 +126,7 @@ module.exports = class Response {
 
   static genNuxMessage(user) {
     let welcome = this.genText(
-      i18n.__("get_started.welcome", {
+      i18n.__("leadgen.promo", {
         userFirstName: user.firstName
       })
     );
