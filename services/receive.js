@@ -223,13 +223,14 @@ module.exports = class Receive {
 
   handlePrivateReply(type, object_id) {
     let welcomeMessage =
-      i18n.__("leadgen.promo") + "hello" + " " + "how are you" +
-      " " +
-      i18n.__("get_started.welcome") +
-      " " +
-      i18n.__("get_started.guidance") +
-      ". " +
-      i18n.__("get_started.help");
+      i18n.__("get_started.welcome");
+      // i18n.__("leadgen.promo") + "hello" + " " + "how are you" +
+      // " " +
+      // i18n.__("get_started.welcome") +
+      // " " +
+      // i18n.__("get_started.guidance") +
+      // ". " +
+      // i18n.__("get_started.help");
 
     let response = Response.genQuickReply(welcomeMessage, [
       {

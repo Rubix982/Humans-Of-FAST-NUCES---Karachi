@@ -64,7 +64,7 @@
     "help": "What do you want to do today?"
   },
   "leadgen": {
-    "promo": "Hi {{userFirstName}}, finding great outfits is now easier and more convenient.",
+    "promo": "Hi {{userFirstName}}, sharing the writer inside you is now easier.",
     "title": "50% Coupon",
     "subtitle": "Here is your coupon",
     "apply": "Apply discount",
