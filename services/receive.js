@@ -232,22 +232,22 @@ module.exports = class Receive {
       // i18n.__("get_started.help");
 
     let response = Response.genQuickReply(welcomeMessage, [
-      // {
-      //   title: i18n.__("menu.suggestion"),
-      //   payload: "CURATION"
-      // },
-      // {
-      //   title: i18n.__("menu.help"),
-      //   payload: "CARE_HELP"
-      // },
       {
-        title: il8n.__("menu.write"),
-        payload: "WRITE"
+        title: i18n.__("menu.write"),
+        payload: "CURATION"
       },
       {
-        title: il8n.__("menu.picture"),
-        payload: "PICTURE"
-      }
+        title: i18n.__("menu.picture"),
+        payload: "CARE_HELP"
+      },
+      // {
+      //   title: il8n.__("menu.write"),
+      //   payload: "WRITE"
+      // },
+      // {
+      //   title: il8n.__("menu.picture"),
+      //   payload: "PICTURE"
+      // }
     ]);
 
     console.log(`Here in receive.js, checking for output`, response.text);
