@@ -232,14 +232,14 @@ module.exports = class Receive {
       // i18n.__("get_started.help");
 
     let response = Response.genQuickReply(welcomeMessage, [
-      {
-        title: i18n.__("menu.suggestion"),
-        payload: "CURATION"
-      },
-      {
-        title: i18n.__("menu.help"),
-        payload: "CARE_HELP"
-      },
+      // {
+      //   title: i18n.__("menu.suggestion"),
+      //   payload: "CURATION"
+      // },
+      // {
+      //   title: i18n.__("menu.help"),
+      //   payload: "CARE_HELP"
+      // },
       {
         title: il8n.__("menu.write"),
         payload: "WRITE"
