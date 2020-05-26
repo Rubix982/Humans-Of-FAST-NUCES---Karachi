@@ -100,6 +100,7 @@ module.exports = class Receive {
           })
         ),
         Response.genText(i18n.__("get_started.guidance")),
+        Response.genText(il8n.__("menu.write")),
         Response.genQuickReply(i18n.__("get_started.help"), [
           {
             title: i18n.__("menu.suggestion"),
