@@ -143,15 +143,15 @@ module.exports = class Response {
         payload: "CARE_HELP"
       },
       {
-        title: il8n.__("menu.write"),
+        title: i18n.__("menu.write"),
         payload: "WRITE"
       },
       {
-        title: il8n.__("menu.picture"),
+        title: i18n.__("menu.picture"),
         payload: "PICTURE"
       },
       {
-        title: il8n.__("menu.visit"),
+        title: i18n.__("menu.visit"),
         payload: "VISIT_PAGE"
       }
     ]);
