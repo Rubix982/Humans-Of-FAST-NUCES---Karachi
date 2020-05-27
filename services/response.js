@@ -126,7 +126,7 @@ module.exports = class Response {
 
   static genNuxMessage(user) {
     let welcome = this.genText(
-      i18n.__("leadgen.promo", {
+      i18n.__("profile.greeting", {
         userFirstName: user.firstName
       })
     );
@@ -135,11 +135,11 @@ module.exports = class Response {
 
     let curation = this.genQuickReply(i18n.__("get_started.help"), [
       {
-        title: i18n.__("menu.suggestion"),
+        title: i18n.__("menu.write"),
         payload: "CURATION"
       },
       {
-        title: i18n.__("menu.help"),
+        title: i18n.__("menu.picture"),
         payload: "CARE_HELP"
       }
     ]);
