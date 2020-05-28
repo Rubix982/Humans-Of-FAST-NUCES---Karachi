@@ -60,6 +60,98 @@ Or, use Webhooks for Pages to retrieve the messages.
 - FASTians X
 - All You Read Is FAST
 
+# Messenger Platform
+
+## Introduction To The Messenger Platform
+
+- Introduction
+  - Integration Components
+  - Conversation Components
+  - Entry Points
+  - General Best Practices
+- Webhook Setup
+  - App Setup
+  - Quick Start
+  - Try Test Drive
+  - Platform Design Kit
+  - Sample Bots
+- Quick Replies
+  - Templates
+  - Buttons
+  - Persistent Menu
+  - One-time Notification
+  - Message Tags
+  - Personas
+  - Sender Actions
+  - Handover Protocol
+  - Saving Assets
+  - High-Volume Messages
+- Webhooks
+  - Replies and Reactions
+  - Versioning
+- Add the Messenger Extensions SDK
+  - Share Webview Content
+  - Manage Permissions
+  - Get User & Conversation Context
+  - Get Supported Features
+- Customer Chat Plugin (beta)
+  - Welcome Screen
+  - Private Replies
+  - Messenger Codes
+  - Send to Messenger Plugin
+  - Checkbox Plugin
+  - Message Us Plugin
+  - m.me Links
+  - Click-to-Messenger Ads
+  - Sponsored Messages
+- Account Linking
+  - Customer Matching
+  - PSID/ASID Matching
+  - Profile Information
+  - Custom Labels
+- Natural Language Processing
+- Analytics And Feedback
+  - Messaging Insights API
+  - App Events
+- Submission Process
+  - Pre-launch Checklist
+  - Submit Your App
+  - Sample Submission
+- Policy & Usage Guidelines
+  - Platform Policy   Overview
+  - Responsiveness Requirements
+- Reference
+  - Web Plugins
+  - Send API
+  - Webhook Events
+  - Quick Replies
+  - Templates
+  - Buttons
+  - Messenger Profile API
+  - Messenger Extensions SDK
+  - Attachment Upload API
+  - Messaging Insights API
+  - Handover Protocol API
+  - Error Codes
+  - Supported Locales
+  - Personas API
+  - Messaging Feature   - Review API
+  - ID Matching API
+- Useful Resources
+  - Community & Support
+    - Messenger Platform Developer Community Group
+    - Developer Community Forum
+    - Bug Reports
+    - Changelog Notifications
+  - For New Business
+    - Developer Videos
+    - Messaging Partner Directory
+  - Dev Tools
+    - Graph API Explorer
+    - FB Access Token Debugger
+    - FB Platform Status
+    - FB Login
+
 # Psych
 
 ## Heroku Instructions

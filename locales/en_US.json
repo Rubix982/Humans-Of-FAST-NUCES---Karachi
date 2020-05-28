@@ -32,7 +32,12 @@
     "caption": "After the picture, reply with the caption in the next message"
   },
   "write": {
-    "starting": "Reply immediately in the your next message what your wanted to be posted",
+    "intro": "Welcome to the writing section!",
+    "prompt": "If you already know what to write, please go ahead with \"continue\"",
+    "template": "Maybe you want some ideas before you go ahead?",
+    "continue:": "I'm good!",
+    "options": "Show ideas",
+    "starting": "{{ userFirstName }}, Reply immediately in the your next message what your wanted to be posted",
     "anonymity": "Do you wish to remain anonymous?",
     "yes": "Yes",
     "no": "No",

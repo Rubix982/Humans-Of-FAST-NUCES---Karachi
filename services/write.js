@@ -15,7 +15,7 @@ const Response = require("./response"),
   config = require("./config"),
   i18n = require("../i18n.config");
 
-module.exports = class Curation {
+module.exports = class Write {
   constructor(user, webhookEvent) {
     this.user = user;
     this.webhookEvent = webhookEvent;
@@ -26,9 +26,24 @@ module.exports = class Curation {
     let outfit;
 
     switch (payload) {
+
+      case "INTRO":
+
+        break;
+
+      case ""
+
       case "STARTING":
         response = [
-          i18n.__("")
+          Response.genText(
+            i18n.__("write.intro", {
+              userFirstName: this.user.firstName
+            })
+          ),
+          Response.genGenericTemplate(
+            `${config.appUrl}/write/1.jpg`,
+            i18n.__("")
+          )
         ]
         break;
 
