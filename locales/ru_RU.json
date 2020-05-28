@@ -1,6 +1,6 @@
 {
   "profile": {
-    "greeting": "Добро пожаловать в магазин Original Coast Clothing, {{user_first_name}}! Нажмите \"Начать\", чтобы написать нашему боту. Хотите такой же бот? Перейдите по адресу https://fb.me/get-sample-oc."
+    "greeting": "Добро пожаловать в магазин Humans Of FAST NUCES - Karachi, {{user_first_name}}! Нажмите \"Начать\", чтобы написать нашему боту. Хотите такой же бот? Перейдите по адресу https://fb.me/get-sample-oc."
   },
   "menu": {
     "support": "Служба поддержки клиентов",
@@ -11,7 +11,7 @@
     "start_over": "Начать заново"
   },
   "get_started": {
-    "welcome": "Здравствуйте, {{userFirstName}}! Добро пожаловать в магазин Original Coast Clothing! У нас вы найдете одежду на любой случай.",
+    "welcome": "Здравствуйте, {{userFirstName}}! Добро пожаловать в магазин Humans Of FAST NUCES - Karachi! У нас вы найдете одежду на любой случай.",
     "guidance": "Для выбора функций используйте меню ниже.",
     "help": "Чем мы можем вам помочь?"
   },

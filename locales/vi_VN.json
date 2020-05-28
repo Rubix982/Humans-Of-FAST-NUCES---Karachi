@@ -1,6 +1,6 @@
 {
   "profile": {
-    "greeting": "Chào mừng bạn đến với Original Coast Clothing {{user_first_name}}! Hãy nhấp vào nút Bắt đầu để tận hưởng trải nghiệm nhắn tin mẫu và hoàn toàn tự động của chúng tôi. Nếu bạn muốn xây dựng trải nghiệm tương tự, hãy truy cập https://fb.me/get-sample-oc"
+    "greeting": "Chào mừng bạn đến với Humans Of FAST NUCES - Karachi {{user_first_name}}! Hãy nhấp vào nút Bắt đầu để tận hưởng trải nghiệm nhắn tin mẫu và hoàn toàn tự động của chúng tôi. Nếu bạn muốn xây dựng trải nghiệm tương tự, hãy truy cập https://fb.me/get-sample-oc"
   },
   "menu": {
     "support": "Hỗ trợ khách hàng",
@@ -11,7 +11,7 @@
     "start_over": "Bắt đầu lại"
   },
   "get_started": {
-    "welcome": "Hi {{userFirstName}}! Chào mừng bạn đến với Original Coast Clothing để khám phá những phong cách phù hợp với mọi hoàn cảnh.",
+    "welcome": "Hi {{userFirstName}}! Chào mừng bạn đến với Humans Of FAST NUCES - Karachi để khám phá những phong cách phù hợp với mọi hoàn cảnh.",
     "guidance": "Hãy sử dụng menu bên dưới bất cứ lúc nào để di chuyển giữa các tính năng",
     "help": "Chúng tôi có thể giúp gì cho bạn nào?"
   },

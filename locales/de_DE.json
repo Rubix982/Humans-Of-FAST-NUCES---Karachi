@@ -1,6 +1,6 @@
 {
   "profile": {
-    "greeting": "Herzlich willkommen bei Original Coast Clothing, {{user_first_name}}! Klicke auf „Los geht’s“, um unser Beispiel für automatisierte Nachrichten zu entdecken. Wenn du ein ähnliches Kundenerlebnis anbieten möchtest, besuche die Seite https://fb.me/get-sample-oc."
+    "greeting": "Herzlich willkommen bei Humans Of FAST NUCES - Karachi, {{user_first_name}}! Klicke auf „Los geht’s“, um unser Beispiel für automatisierte Nachrichten zu entdecken. Wenn du ein ähnliches Kundenerlebnis anbieten möchtest, besuche die Seite https://fb.me/get-sample-oc."
   },
   "menu": {
     "support": "Kundensupport",
@@ -11,7 +11,7 @@
     "start_over": "Neu beginnen"
   },
   "get_started": {
-    "welcome": "Hallo {{userFirstName}}! Herzlich willkommen bei Original Coast Clothing! Hier findest du Outfits für jeden Anlass.",
+    "welcome": "Hallo {{userFirstName}}! Herzlich willkommen bei Humans Of FAST NUCES - Karachi! Hier findest du Outfits für jeden Anlass.",
     "guidance": "Du kannst jederzeit über das unten stehende Menü durch die Features navigieren.",
     "help": "Wie können wir dir heute behilflich sein?"
   },
