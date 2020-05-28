@@ -26,7 +26,22 @@ module.exports = class Curation {
     let outfit;
 
     switch (payload) {
+      case "STARTING":
+        response = [
+          i18n.__("")
+        ]
+        break;
 
+      case "ANONYMITY":
+
+        break;
+
+      case "SCHEDULE":
+
+        break;
+
+      default:
+        break;
     }
 
     return response;
