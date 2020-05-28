@@ -32,7 +32,7 @@
     "caption": "After the picture, reply with the caption in the next message"
   },
   "write": {
-    "intro": "Welcome to the writing section!",
+    "intro": "Hello, {{ userFirstName }}! Welcome to the writing section!",
     "prompt": "If you already know what to write, please go ahead with \"continue\"",
     "template": "Maybe you want some ideas before you go ahead?",
     "continue:": "I'm good!",

@@ -28,10 +28,20 @@ module.exports = class Write {
     switch (payload) {
 
       case "INTRO":
+        Response.genText(
+          i18n.__("write.into", {
+            userFirstName: this.user.firstName
+          })
+        ),
+        Response.genGenericTemplate(
+          `${config.appUrl}`
+        )
 
         break;
 
-      case ""
+      case "":
+
+        break;
 
       case "STARTING":
         response = [
@@ -45,10 +55,6 @@ module.exports = class Write {
             i18n.__("")
           )
         ]
-        break;
-
-      case "ANONYMITY":
-
         break;
 
       case "SCHEDULE":
