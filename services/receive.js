@@ -100,7 +100,7 @@ module.exports = class Receive {
           })
         ),
         Response.genText(i18n.__("get_started.guidance")),
-        Response.genText(il8n.__("menu.write")),
+        Response.genText(i18n.__("menu.write")),
         Response.genQuickReply(i18n.__("get_started.help"), [
           {
             title: i18n.__("menu.suggestion"),
@@ -224,13 +224,6 @@ module.exports = class Receive {
 
   handlePrivateReply(type, object_id) {
     let welcomeMessage = i18n.__("get_started.welcome");
-      // i18n.__("leadgen.promo") + "hello" + " " + "how are you" +
-      // " " +
-      // i18n.__("get_started.welcome") +
-      // " " +
-      // i18n.__("get_started.guidance") +
-      // ". " +
-      // i18n.__("get_started.help");
 
     let response = Response.genQuickReply(welcomeMessage, [
       {
@@ -240,15 +233,7 @@ module.exports = class Receive {
       {
         title: i18n.__("menu.picture"),
         payload: "CARE_HELP"
-      },
-      // {
-      //   title: il8n.__("menu.write"),
-      //   payload: "WRITE"
-      // },
-      // {
-      //   title: il8n.__("menu.picture"),
-      //   payload: "PICTURE"
-      // }
+      }
     ]);
 
     console.log(`Here in receive.js, checking for output`, response.text);
