@@ -14,7 +14,8 @@
     "order": "Order updates"
   },
   "visit": {
-    "starter": "Visit the page at "
+    "facebook": "Visit the page at https://fb.me/HumansAtFAST",
+    "website": "Visit the website at https://psych-proj.herokuapp.com/"
   },
   "picture": {
     "starting": "Share a picture with the rest of FAST NUCES!",
